@@ -65,3 +65,43 @@ for(int i=0; i<32; ++i){
     }
 return maxGap;
 }   */
+
+/*int solution(int N) {
+int maxGap = 0, gap = 0;
+while(N%2==0)
+    N/=2;
+while (N>=1) {
+    if((N%2)==1)
+    {
+     maxGap = (gap>maxGap)? gap: maxGap;
+     if (N==1) 
+     return maxGap;
+     gap = -1;
+    }
+    gap++;
+N/=2;
+}
+ return maxGap;
+}
+*/
+
+/*
+int solution(int N) {
+int maxGap = 0, gap = -1;
+
+while (N>=1) {
+    if ((gap!=-1)&&((N%2)==0)) {// after reached first 1 only
+        gap++;
+    }
+    if((N%2)==1)
+    {
+     maxGap = (gap>maxGap)? gap: maxGap;
+     if (N==1) 
+     return maxGap;
+     gap = 0;
+    }
+N/=2;
+}
+ return maxGap;
+}
+*/
